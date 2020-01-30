@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Album</title>
+</head>
+
+<link href='https://fonts.googleapis.com/css?family=Anton|Passion+One|PT+Sans+Caption' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3561/bootstrap.css">
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3561/magnific-popup.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3561/jquery.magnific-popup.min.js"></script>
+<style>
+  .container--gallery {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .container--gallery .row {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+
+  .container--gallery [class*="col-"] {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 8px;
+  }
+
+  .photo-zoom {
+    outline: 0;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 230px;
+    outline: 1px solid #d60e0e;
+  }
+
+  .photo-zoom img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  [class*="-1"]:not([class*="-10"]):not([class*="-11"]):not([class*="-12"]) .photo-zoom img,
+  [class*="-2"] .photo-zoom img,
+  [class*="-3"] .photo-zoom img {
+    width: auto;
+    height: 100%;
+  }
+
+  .image-source-link {
+    color: #98C3D1;
+  }
+
+  .mfp-with-zoom .mfp-container,
+  .mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.23s ease-out;
+    transition: all 0.23s ease-out;
+  }
+
+  .mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+  }
+
+  .mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+  }
+
+  .mfp-with-zoom.mfp-removing .mfp-container,
+  .mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+  }
+</style>
+
+<body>
+
+  <div class="container container--gallery">
+    <div class="row">
+
+
+
+
+      <div class="col-sm-6"><a class="photo-zoom" href="photo/EJ9A2960.JPG"><img src="photo/EJ9A2960.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-6"><a class="photo-zoom" href="photo/EJ9A4035.JPG"><img src="photo/EJ9A4035.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/IMG_4057.JPG"><img src="photo/IMG_4057.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1140.JPG"><img src="photo/R89A1140.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1157.JPG"><img src="photo/R89A1157.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-5"><a class="photo-zoom" href="photo/R89A1169.JPG"><img src="photo/R89A1169.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-7"><a class="photo-zoom" href="photo/R89A1223.JPG"><img src="photo/R89A1223.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-7"><a class="photo-zoom" href="photo/R89A1225.JPG"><img src="photo/R89A1225.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-5"><a class="photo-zoom" href="photo/R89A1231.JPG"><img src="photo/R89A1231.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1242.JPG"><img src="photo/R89A1242.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1788.JPG"><img src="photo/R89A1788.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1841.JPG"><img src="photo/R89A1841.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A1842.JPG"><img src="photo/R89A1842.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A1845.JPG"><img src="photo/R89A1845.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-8"><a class="photo-zoom" href="photo/R89A2257.JPG"><img src="photo/R89A2257.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A2344.JPG"><img src="photo/R89A2344.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A2434.JPG"><img src="photo/R89A2434.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-8"><a class="photo-zoom" href="photo/R89A4272.JPG"><img src="photo/R89A4272.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4282.JPG"><img src="photo/R89A4282.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4350.JPG"><img src="photo/R89A4350.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4353.JPG"><img src="photo/R89A4353.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4356.JPG"><img src="photo/R89A4356.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4360.JPG"><img src="photo/R89A4360.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4404.JPG"><img src="photo/R89A4404.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4405.JPG"><img src="photo/R89A4405.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4423.JPG"><img src="photo/R89A4423.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4445.JPG"><img src="photo/R89A4445.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4811.JPG"><img src="photo/R89A4811.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4843.JPG"><img src="photo/R89A4843.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4909.JPG"><img src="photo/R89A4909.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A4979.JPG"><img src="photo/R89A4979.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A5097.JPG"><img src="photo/R89A5097.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-3"><a class="photo-zoom" href="photo/R89A5101.JPG"><img src="photo/R89A5101.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-3"><a class="photo-zoom" href="photo/R89A5574.JPG"><img src="photo/R89A5574.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-3"><a class="photo-zoom" href="photo/R89A5646.JPG"><img src="photo/R89A5646.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-3"><a class="photo-zoom" href="photo/R89A5653.JPG"><img src="photo/R89A5653.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A8754.JPG"><img src="photo/R89A8754.JPG" alt="" />
+        </a>
+      </div>
+      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A8839.JPG"><img src="photo/R89A8839.JPG" alt="" />
+        </a>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+  <script>
+
+
+    $(document).ready(function () {
+      $('.container--gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+          verticalFit: true,
+        },
+        gallery: {
+          enabled: true
+        },
+        zoom: {
+          enabled: true,
+          duration: 230,
+          opener: function (element) {
+            return element.find('img');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
