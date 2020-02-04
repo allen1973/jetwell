@@ -87,13 +87,14 @@
     <div class="banner_image storage">
         <div class="page_title">
             <p class="pt_tt">Storage</p>
-            <p><a href="Storage.html">Nimble ></a><a href="Nimble-dHCI.html">Nimble dHCI ></a>
+            <p><a href="Storage.html">Nimble ></a><a href="Nimble-dHCI.html" class="active">Nimble dHCI ></a>
                 <a href="Primera.html">Primera ></a>
             </p>
         </div>
     </div>
     <div class="wrapper">
         <a name="sp01" class="sp"></a>
+        <small>Overview</small>
         <div class="content_title">HPE Nimble Storage dHCI</div>
         <!--  <div class="content_img_three">
             <div class="content_text_sanjyusan">
@@ -173,7 +174,7 @@
         <div class="content_sub_green">dHCI setup software</div>
         <div class="content_sub">Deploying the dHCI solution can be accomplished by going through the following simple
             steps with the help of the dHCI setup software:
-            <ul style="margin-left:1.5rem">
+            <ul class="content_sub_content" style="margin-left:1.5rem">
                 <li>Physical infrastructure layout</li>
                 <li>Completion of the configuration Worksheet</li>
                 <li>Network configuration</li>
@@ -189,21 +190,24 @@
             vCenter plugin.
         </div>
         <div class="content_sub">Adding a new server to dHCI can be accomplished by the following quick steps:
-            <ul style="margin-left:1.5rem">
+            <ul class="content_sub_content" style="margin-left:1.5rem">
                 <li>Rack the server and perform the cabling</li>
                 <li>Review section Ethernet Switch Configuration</li>
                 <li>Configure the switch and assign the correct VLAN</li>
                 <li>Assign IP address to ESXi management interface</li>
                 <li>Add server in vSphere cluster using vCenter plugin</li>
             </ul>
-            In the background, dHCI software automates tasks such as the configuration of vSwitch, iSCSI software
-            initiator and VMDK binding during deployment saving additional cycles for administrators
-            dHCI plugin could also be utilized to create & grow VMFS and/or VVOL based datastores that are mapped to
-            volumes on HPE Nimble AF / HF array configured as part of the dHCI deployment. Additional operations such as
-            clones, snapshots on the datastores could also be performed directly from the Nimble dHCI plugin on to
-            vCenter
-            For additional information related to managing VMFS/VVOL based datastores on HPE Nimble Storage dHCI, please
-            refer to the VMware integration guide available at Infosight.hpe.com.
+            <p class="content_sub_content">In the background, dHCI software automates tasks such as the configuration of
+                vSwitch, iSCSI software
+                initiator and VMDK binding during deployment saving additional cycles for administrators
+                dHCI plugin could also be utilized to create & grow VMFS and/or VVOL based datastores that are mapped to
+                volumes on HPE Nimble AF / HF array configured as part of the dHCI deployment. Additional operations
+                such as
+                clones, snapshots on the datastores could also be performed directly from the Nimble dHCI plugin on to
+                vCenter
+                For additional information related to managing VMFS/VVOL based datastores on HPE Nimble Storage dHCI,
+                please
+                refer to the VMware integration guide available at Infosight.hpe.com.</p>
         </div>
         <div class="content_sub_green">HPE Nimble Storage dHCI is natively integrated with HPE InfoSight</div>
         <div class="content_sub">The industry’s most advanced AI for infrastructure. Through cloud-based machine
@@ -214,62 +218,56 @@
             recommendations that eliminate noisy-neighbor VMs, repurpose unused VMs, and self-optimize performance and
             resources.
         </div>
-        <div class="content_sub">For more information about HPE Nimble Storage:
-            https://www.hpe.com/us/en/storage/nimble.html
-        </div>
-        <div class="content_sub">For more information about HPE Infosight:
-            https://www.hpe.com/us/en/solutions/infosight.html
-        </div>
-        <div class="content_sub">For more information about HPE ProLiant DL360:
-            https://h20195.www2.hpe.com/v2/getpdf.aspx/a00008159enus.pdf?v
-        </div>
-        <div class="content_sub">For more information about HPE ProLiant DL380:
-            https://h20195.www2.hpe.com/v2/getpdf.aspx/a00008180ENUS.pdf
-        </div>
-        <div class="content_sub">For more information about HPE M-Series switches:
-            https://buy.hpe.com/b2c/us/en/storage/storage-
-            networking/c/304608?q=%3Arelevance%3Afacet_subbrand%3AM-series&text=&textSearch=&pageSize=10
-        </div>
-        <div class="content_sub">For more information about HPE Aruba switches:
-            https://www.arubanetworks.com/products/networking/switches/
-        </div>
-        <div class="content_sub">For more information about HPE FlexFabric switches:
-            https://h50146.www5.hpe.com/products/networking/datasheet/HPE_5710_Switch_Series.pdf
-            For additional information, please refer to the HPE Nimble Storage dHCI deployment guide
-        </div>
 
         <div class="content_title">Configuration Information</div>
-        <div class="content_sub_green">What’s Included?</div>
+        <div class="content_sub_green">What's Included?</div>
         <div class="content_sub">
-            <ul style="margin-left:1.5rem">
-                <li>dHCI Automation Software: HPE Nimble Storage dHCI software stack (no additional fee)<br>
+            <ul class="content_sub_content" style="margin-left:1.5rem">
+                <li><b>dHCI Automation Software:</b> HPE Nimble Storage dHCI software stack (no additional fee)<br>
                     - dHCIsetupsoftware(runsnativelyontheNimblearray)<br>
                     - vCenterplugin[HPENimbleStoragedHCIrequiresvCenter“Standard”(or)“Essential”license] <br>
                     - HPEInfosightfordHCI</li>
-                <li>Storage: 1 HPE Nimble AF (or) HF platforms (Gen 5)<br>
+                <li><b>Storage:</b> 1 HPE Nimble AF (or) HF platforms (Gen 5)<br>
                     - HPEInfosightmaybeusedwithHPENimbleStorage(noadditionalfee)</li>
-                <li>Computing resources: Existing (or) new HPE ProLiant DL360 or DL380 (Gen9 or Gen10) <br>
+                <li><b>Computing resources:</b> Existing (or) new HPE ProLiant DL360 or DL380 (Gen9 or Gen10) <br>
                     - ServercountperdHCIconfiguration:2–20ProLiantDLservers<br>
                     - HPEInfosightmaybeusedwithHPEProLiantDLs(noadditionalfee)</li>
-                <li>Ethernet switches: The Choice of HPE M-Series, HPE FlexFabric 5710, 5945 switches, HPE Aruba 8325
+                <li><b>Ethernet switches:</b> The Choice of HPE M-Series, HPE FlexFabric 5710, 5945 switches, HPE
+                    Aruba 8325
                     (or) Cisco Nexus 3k and 5k (Purchase of Cisco switches is not available through dHCI ordering on HPE
                     web pages)
                     - SwitchcountperdHCIconfiguration:2TopoftheRackswitches</li>
-                <li>Hypervisor: VMware vSphere 6.5 or VMware vSphere 6.7</li>
+                <li><b>Hypervisor:</b> VMware vSphere 6.5 or VMware vSphere 6.7</li>
             </ul>
-            Note:
-            For Greenfield configurations, Nimble storage array (AF/HF array that needs to be ordered to include dHCI
-            software through OCA) and ProLiant DL server products and corresponding support mandatory components;
-            Customers can optionally order HPE Switches (supported list above) at the time of purchase
-            For Brownfield configurations, 1 Nimble storage array (AF/HF array that needs to be ordered to include dHCI
-            software through OCA) is the mandatory component; The storage array would be deployed adjacent to existing
-            HPE ProLiant DL servers (gen 9 or gen 10) and customers can optionally order additional DL servers and/or
-            HPE switches (supported list above) at the time of purchase
-            HPE Nimble Storage dHCI solution only support iSCSI based connectivity and does not support Fiber Channel
-            (FC) in this release More details on ordering in the “Ordering” section below
+            <div class="content_sub" style="color:orange">
+                Note:
+                For Greenfield configurations, Nimble storage array (AF/HF array that needs to be ordered to include
+                dHCI
+                software through OCA) and ProLiant DL server products and corresponding support mandatory components;
+                Customers can optionally order HPE Switches (supported list above) at the time of purchase
+                For Brownfield configurations, 1 Nimble storage array (AF/HF array that needs to be ordered to include
+                dHCI
+                software through OCA) is the mandatory component; The storage array would be deployed adjacent to
+                existing
+                HPE ProLiant DL servers (gen 9 or gen 10) and customers can optionally order additional DL servers
+                and/or
+                HPE switches (supported list above) at the time of purchase
+                HPE Nimble Storage dHCI solution only support iSCSI based connectivity and does not support Fiber
+                Channel
+                (FC) in this release More details on ordering in the “Ordering” section below</div>
 
 
         </div>
+        <div class="content_sub"><img class="content_sub_img" src="image/Nimble dHCI-1.png" border="0" /></div>
+        <div class="content_sub"><img class="content_sub_img" src="image/Nimble dHCI-2.png" border="0" /></div>
+        <div class="content_sub"><img class="content_sub_img" src="image/Nimble dHCI-3.png" border="0" /></div>
+        <div class="content_sub"><img class="content_sub_img" src="image/Nimble dHCI-4.png" border="0" /></div>
+        <div class="content_sub"><img class="content_sub_img" src="image/Nimble dHCI-5.png" border="0" /></div>
+        <div class="content_sub"><img class="content_sub_img" src="image/Nimble dHCI-6.png" border="0" /></div>
+        <P style="margin: 8px 0"><a class="content_download" href="pdf/Nimble/Nimble dHCI/Nimble dHCI.pdf"
+                download="Nimble dHCI手冊">Nimble dHCI手冊
+            </a></p>
+
         <!-- InstanceEndEditable -->
         <!--footer-->
         <div class="footer">
