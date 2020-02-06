@@ -51,7 +51,7 @@
   left: 135px;
 }
 
-.one:hover .text_blcok span{ border:6px solid #0da076; padding:2px 10px;background-color:rgba(0,0,0,.4)}
+.one:hover .text_blcok span{ outline:8px solid #0da076; padding:2px 10px;background-color:rgba(0,0,0,.4)}
 
 .hoverbtn {
   cursor: pointer;
