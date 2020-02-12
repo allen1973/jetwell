@@ -13,7 +13,7 @@ body{ position:relative;}
 .menu_blcok .menu{ height:110px; line-height:110px; border-bottom:7px solid #fff; display:inline-block; font-size:17px; color:#15a480; margin-left:40px; transition:.2s;}
 .menu_blcok .menu:hover{ border-bottom:7px solid #15a480; transition:.3s;color:#fff;}
 
-.have_class a.menu:before {display: block;content: ""; width:100%;height:32px;position: absolute;bottom:35px;left:16px;border: 3px solid #15a480;background-color:rgba(0,0,0,.04);z-index: -2;border-radius:0px;}
+.have_class a.menu:before {display: block;content: ""; width:100%;bottom:35%;height:32px;position: absolute;left:16px;border: 3px solid #15a480;background-color:rgba(0,0,0,.04);z-index: -2;border-radius:0px;}
 .have_class a.menu:hover:before {display: block;content: ""; width:100%;height:32px;position: absolute;bottom:35px;left:16px;border: 3px solid #15a480;background-color:#15a480;z-index: -2;border-radius: 0px;}
 .have_class{ display:inline-block; position:relative;}
 .have_class .menu_level2{ height:0; display:inline-block; position:absolute; top:110px; left:40px; padding-top:5px; overflow:hidden; transition:.3s;}
@@ -37,7 +37,11 @@ body{ position:relative;}
 .logo,.logo img{ height:55px;}
 .menu_blcok .menu{ height:55px; line-height:55px;}
 .have_class .menu_level2{ top:55px;}
-
+.have_class a.menu:before {bottom:18%;}
+.menu_blcok .menu {
+  font-size: .8rem;
+  margin-left: 37px;
+}
 }
 
 @media screen and ( max-width:767px) {
@@ -55,6 +59,7 @@ body{ position:relative;}
 .have_class:hover .menu_level2{ height:auto; transition:.3s;}
 .have_class .menu_level2 .menu02{ width:100%; background:none;}
 .menu_blcok .menu:hover, .menu_blcok .menu.hover{ border-bottom:1px solid #15a480;}
+.have_class a.menu:before {bottom:10%;}
 .menu_blcok .menu:hover{ color:#15a480;}
 /*footer*/
 .footer{ padding:30px 10px 0px 10px;}
