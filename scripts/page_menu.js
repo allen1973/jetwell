@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	autoHoverMenu();
-	mobileMenuSwitch();
-	w3.includeHTML();
+	mobileMenuSwitch();	
 });
 
 //menu auto hover
