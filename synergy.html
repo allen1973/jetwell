@@ -1,7 +1,6 @@
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<!-- InstanceBegin template="/Templates/layout.dwt" codeOutsideHTMLIsLocked="false" -->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,6 +14,7 @@
 
 
     <link href="css/page.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/w3.js"></script>
     <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="scripts/page_menu.js"></script>
 
@@ -24,65 +24,7 @@
 
 <body>
     <!--header-->
-    <div class="header">
-        <a class="logo" href="index.html"><img src="image/logo_hpe.jpg" border="0" /></a><a class="logo"
-            href="http://www.jetwell.com.tw/" target="blank"><img src="image/logo_jetwell.jpg" border="0" /></a>
-        <div class="mobile_menu_btn">
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        <!-- <div class="menu_blcok">
-            <a class="menu" href="simplivity_380.html">Simplivity 380</a>
-            <a class="menu" href="synergy.html">Synergy</a>
-            <div class="have_class"><a class="menu" href="hpe_pointnext.html">HPE Pointnext</a>
-                <div class="menu_level2"><a class="menu02" href="ts_support_credits.html">
-                        <p>永保安康卡</p>
-                    </a><a class="menu02" href="flexible_capacity_service.html#sp01">
-                        <p>彈性容量服務</p>
-                    </a><a class="menu02" href="flexible_capacity_service.html#sp02">
-                        <p>資料庫支援服務</p>
-                    </a><a class="menu02" href="flexible_capacity_service.html#sp03">
-                        <p>資料中心搬遷服務</p>
-                    </a></div>
-            </div>
-        </div> -->
-        <div class="menu_blcok">
-            <div class="have_class"><a class="menu" href="index.html">Home</a></div>
-            <div class="have_class"><a class="menu" href="simplivity_380.html">Simplivity</a>
-                <div class="menu_level2"><a class="menu02" href="simplivity_380.html">
-                        <p>SimpliVity 380</p>
-                    </a><a class="menu02" href="Nutanix.html">
-                        <p>Proliant DX系列 (Nutanix)</p>
-                    </a>
-                </div>
-            </div>
-            <!-- <a class="menu" href="simplivity_380.html">Simplivity 380</a> -->
-            <div class="have_class"><a class="menu" href="synergy.html">Synergy</a></div>
-            <div class="have_class"><a class="menu" href="Storage.html">Storage</a>
-                <div class="menu_level2"><a class="menu02" href="Storage.html">
-                        <p>Nimble</p>
-                    </a><a class="menu02" href="Nimble-dHCI.html">
-                        <p>Nimble dHCI</p>
-                    </a>
-                    <a class="menu02" href="Primera.html">
-                        <p>Primera</p>
-                    </a>
-                </div>
-            </div>
-            <div class="have_class"><a class="menu" href="hpe_pointnext.html">HPE Pointnext</a>
-                <div class="menu_level2"><a class="menu02" href="ts_support_credits.html">
-                        <p>永保安康卡</p>
-                    </a><a class="menu02" href="flexible_capacity_service.html#sp01">
-                        <p>彈性容量服務</p>
-                    </a><a class="menu02" href="flexible_capacity_service.html#sp02">
-                        <p>資料庫支援服務</p>
-                    </a><a class="menu02" href="flexible_capacity_service.html#sp03">
-                        <p>資料中心搬遷服務</p>
-                    </a></div>
-            </div>
-        </div>
-    </div>
+    <div w3-include-HTML="header.html"></div>
 
     <div class="banner"><iframe src="https://www.youtube.com/embed/iE-spGCMIes?loop=1&autoplay=1&playlist=iE-spGCMIes"
             frameborder="0" allowfullscreen></iframe></div>
@@ -180,15 +122,10 @@
         </div> -->
 
         <!--footer-->
-        <div class="footer">
-            <p class="footer_top_line"></p>
-            <p class="footer_text">Copyright © JETWELL COMPUTER CO., LTD. All Rights Reserved.
+    <div w3-include-HTML="footer.html"></div>
 
-            </p>
-            <p class="footer_text"><a href="https://goo.gl/maps/Y9jsFHK4poR2" target="_blank">台灣總公司 高雄市左營區民族一路1163號
-                </a><a href="tel:07-345801">TEL： 07 - 3458011 </a><a href="tel:07-3458433">FAX ：07 - 3458433</a></p>
-        </div>
-</body>
-
-
+    <script>
+      w3.includeHTML();
+    </script>
+  </body>
 </html>

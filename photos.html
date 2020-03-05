@@ -1,303 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <!--不快取-->
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="0" />
+    <title>Album</title>
+  </head>
+  <!-- InstanceEndEditable -->
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <!--不快取-->
-  <META HTTP-EQUIV="pragma" CONTENT="no-cache">
-  <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
-  <META HTTP-EQUIV="expires" CONTENT="0">
-  <title>Album</title>
-</head>
-<!-- InstanceEndEditable -->
-
-<link href="css/index.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="scripts/page_menu.js"></script>
-<!-- InstanceEndEditable -->
-<link rel="shortcut icon" href="favicon.ico" />
-<link href="css/layout.css" rel="stylesheet" type="text/css" />
-<link href='https://fonts.googleapis.com/css?family=Anton|Passion+One|PT+Sans+Caption' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3561/bootstrap.css">
-<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3561/magnific-popup.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3561/jquery.magnific-popup.min.js"></script>
-<style>
-  .container--gallery {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .container--gallery .row {
-    margin-left: -4px;
-    margin-right: -4px;
-  }
-
-  .container--gallery [class*="col-"] {
-    padding-left: 4px;
-    padding-right: 4px;
-    margin-bottom: 8px;
-  }
-
-  .photo-zoom {
-    outline: 0;
-    overflow: hidden;
-    position: relative;
-    display: block;
-    height: 230px;
-
-  }
-
-  .photo-zoom img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    height: auto;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-  [class*="-1"]:not([class*="-10"]):not([class*="-11"]):not([class*="-12"]) .photo-zoom img,
-  [class*="-2"] .photo-zoom img,
-  [class*="-3"] .photo-zoom img {
-    width: auto;
-    height: 100%;
-  }
-
-  .image-source-link {
-    color: #98C3D1;
-  }
-
-  .mfp-with-zoom .mfp-container,
-  .mfp-with-zoom.mfp-bg {
-    opacity: 0;
-    -webkit-backface-visibility: hidden;
-    -webkit-transition: all 0.23s ease-out;
-    transition: all 0.23s ease-out;
-  }
-
-  .mfp-with-zoom.mfp-ready .mfp-container {
-    opacity: 1;
-  }
-
-  .mfp-with-zoom.mfp-ready.mfp-bg {
-    opacity: 0.8;
-  }
-
-  .mfp-with-zoom.mfp-removing .mfp-container,
-  .mfp-with-zoom.mfp-removing.mfp-bg {
-    opacity: 0;
-  }
-
-  @media (min-width: 992px) {
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <script src="scripts/w3.js"></script>
+  <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="scripts/page_menu.js"></script>
+  <!-- InstanceEndEditable -->
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link href="css/layout.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Anton|Passion+One|PT+Sans+Caption"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3561/bootstrap.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3561/magnific-popup.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3561/jquery.magnific-popup.min.js"></script>
+  <style>
     .container--gallery {
-      margin-top: 113px;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
-  }
-</style>
 
-<body>
-  <!--header-->
-  <div class="header">
-    <a class="logo" href="index.html"><img src="image/logo_hpe.jpg" border="0" /></a><a class="logo"
-      href="http://www.jetwell.com.tw/" target="blank"><img src="image/logo_jetwell.jpg" border="0" /></a>
-    <div class="mobile_menu_btn">
-      <p></p>
-      <p></p>
-      <p></p>
+    .container--gallery .row {
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+
+    .container--gallery [class*="col-"] {
+      padding-left: 4px;
+      padding-right: 4px;
+      margin-bottom: 8px;
+    }
+
+    .photo-zoom {
+      outline: 0;
+      overflow: hidden;
+      position: relative;
+      display: block;
+      height: 230px;
+    }
+
+    .photo-zoom img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: auto;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    [class*="-1"]:not([class*="-10"]):not([class*="-11"]):not([class*="-12"])
+      .photo-zoom
+      img,
+    [class*="-2"] .photo-zoom img,
+    [class*="-3"] .photo-zoom img {
+      width: auto;
+      height: 100%;
+    }
+
+    .image-source-link {
+      color: #98c3d1;
+    }
+
+    .mfp-with-zoom .mfp-container,
+    .mfp-with-zoom.mfp-bg {
+      opacity: 0;
+      -webkit-backface-visibility: hidden;
+      -webkit-transition: all 0.23s ease-out;
+      transition: all 0.23s ease-out;
+    }
+
+    .mfp-with-zoom.mfp-ready .mfp-container {
+      opacity: 1;
+    }
+
+    .mfp-with-zoom.mfp-ready.mfp-bg {
+      opacity: 0.8;
+    }
+
+    .mfp-with-zoom.mfp-removing .mfp-container,
+    .mfp-with-zoom.mfp-removing.mfp-bg {
+      opacity: 0;
+    }
+
+    @media (min-width: 992px) {
+      .container--gallery {
+        margin-top: 113px;
+      }
+    }
+  </style>
+
+  <body>
+    <!--header-->
+    <div class="header">
+      <a class="logo" href="index.html"
+        ><img src="image/logo_hpe.jpg" border="0"/></a
+      ><a class="logo" href="http://www.jetwell.com.tw/" target="blank"
+        ><img src="image/logo_jetwell.jpg" border="0"
+      /></a>
+      <div class="mobile_menu_btn">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="menu_blcok">
+        <div class="have_class"><a class="menu" href="index.html">Home</a></div>
+        <div class="have_class">
+          <a class="menu" href="simplivity_380.html">Simplivity</a>
+          <div class="menu_level2">
+            <a class="menu02" href="simplivity_380.html">
+              <p>SimpliVity 380</p> </a
+            ><a class="menu02" href="Nutanix.html">
+              <p>Proliant DX系列 (Nutanix)</p>
+            </a>
+          </div>
+        </div>
+        <!-- <a class="menu" href="simplivity_380.html">Simplivity 380</a> -->
+        <div class="have_class">
+          <a class="menu" href="synergy.html">Synergy</a>
+        </div>
+        <div class="have_class">
+          <a class="menu" href="Storage.html">Storage</a>
+          <div class="menu_level2">
+            <a class="menu02" href="Storage.html">
+              <p>Nimble</p> </a
+            ><a class="menu02" href="Nimble-dHCI.html">
+              <p>Nimble dHCI</p>
+            </a>
+            <a class="menu02" href="Primera.html">
+              <p>Primera</p>
+            </a>
+          </div>
+        </div>
+        <div class="have_class">
+          <a class="menu" href="hpe_pointnext.html">HPE Pointnext</a>
+          <div class="menu_level2">
+            <a class="menu02" href="ts_support_credits.html">
+              <p>永保安康卡</p> </a
+            ><a class="menu02" href="flexible_capacity_service.html#sp01">
+              <p>彈性容量服務</p> </a
+            ><a class="menu02" href="flexible_capacity_service.html#sp02">
+              <p>資料庫支援服務</p> </a
+            ><a class="menu02" href="flexible_capacity_service.html#sp03">
+              <p>資料中心搬遷服務</p>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="menu_blcok">
-      <div class="have_class"><a class="menu" href="index.html">Home</a></div>
-      <div class="have_class"><a class="menu" href="simplivity_380.html">Simplivity</a>
-        <div class="menu_level2"><a class="menu02" href="simplivity_380.html">
-            <p>SimpliVity 380</p>
-          </a><a class="menu02" href="Nutanix.html">
-            <p>Proliant DX系列 (Nutanix)</p>
+    <div class="container container--gallery">
+      <div class="row">
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/EJ9A2960.JPG"
+            ><img src="photo/EJ9A2960s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/EJ9A4035.JPG"
+            ><img src="photo/EJ9A4035s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A2344.JPG"
+            ><img src="photo/R89A2344s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A1140.JPG"
+            ><img src="photo/R89A1140s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A1157.JPG"
+            ><img src="photo/R89A1157s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-5">
+          <a class="photo-zoom" href="photo/R89A1169.JPG"
+            ><img src="photo/R89A1169s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-7">
+          <a class="photo-zoom" href="photo/R89A1223.JPG"
+            ><img src="photo/R89A1223s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-7">
+          <a class="photo-zoom" href="photo/R89A1225.JPG"
+            ><img src="photo/R89A1225s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-5">
+          <a class="photo-zoom" href="photo/R89A1231.JPG"
+            ><img src="photo/R89A1231s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A1242.JPG"
+            ><img src="photo/R89A1242s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A1788.JPG"
+            ><img src="photo/R89A1788s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A1841.JPG"
+            ><img src="photo/R89A1841s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/R89A1842.JPG"
+            ><img src="photo/R89A1842s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/R89A1845.JPG"
+            ><img src="photo/R89A1845s.jpg" alt="" />
+          </a>
+        </div>
+
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A2434.JPG"
+            ><img src="photo/R89A2434s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-8">
+          <a class="photo-zoom" href="photo/R89A4272.JPG"
+            ><img src="photo/R89A4272s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A4282.JPG"
+            ><img src="photo/R89A4282s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A4350.JPG"
+            ><img src="photo/R89A4350s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A4353.JPG"
+            ><img src="photo/R89A4353s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A4356.JPG"
+            ><img src="photo/R89A4356s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A4360.JPG"
+            ><img src="photo/R89A4360s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A4404.JPG"
+            ><img src="photo/R89A4404s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/R89A4405.JPG"
+            ><img src="photo/R89A4405s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/R89A4423.JPG"
+            ><img src="photo/R89A4423s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="photo-zoom" href="photo/R89A4811.JPG"
+            ><img src="photo/R89A4811s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-8">
+          <a class="photo-zoom" href="photo/R89A4909.JPG"
+            ><img src="photo/R89A4909s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/R89A4979.JPG"
+            ><img src="photo/R89A4979s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/R89A5097.JPG"
+            ><img src="photo/R89A5097s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-3">
+          <a class="photo-zoom" href="photo/R89A5101.JPG"
+            ><img src="photo/R89A5101s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-3">
+          <a class="photo-zoom" href="photo/R89A5574.JPG"
+            ><img src="photo/R89A5574s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-3">
+          <a class="photo-zoom" href="photo/R89A5646.JPG"
+            ><img src="photo/R89A5646s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-3">
+          <a class="photo-zoom" href="photo/R89A5653.JPG"
+            ><img src="photo/R89A5653s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/R89A8754.JPG"
+            ><img src="photo/R89A8754s.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a class="photo-zoom" href="photo/R89A8839.JPG"
+            ><img src="photo/R89A8839s.jpg" alt="" />
           </a>
         </div>
       </div>
-      <!-- <a class="menu" href="simplivity_380.html">Simplivity 380</a> -->
-      <div class="have_class"><a class="menu" href="synergy.html">Synergy</a></div>
-      <div class="have_class"><a class="menu" href="Storage.html">Storage</a>
-        <div class="menu_level2"><a class="menu02" href="Storage.html">
-            <p>Nimble</p>
-          </a><a class="menu02" href="Nimble-dHCI.html">
-            <p>Nimble dHCI</p>
-          </a>
-          <a class="menu02" href="Primera.html">
-            <p>Primera</p>
-          </a>
-        </div>
-      </div>
-      <div class="have_class"><a class="menu" href="hpe_pointnext.html">HPE Pointnext</a>
-        <div class="menu_level2"><a class="menu02" href="ts_support_credits.html">
-            <p>永保安康卡</p>
-          </a><a class="menu02" href="flexible_capacity_service.html#sp01">
-            <p>彈性容量服務</p>
-          </a><a class="menu02" href="flexible_capacity_service.html#sp02">
-            <p>資料庫支援服務</p>
-          </a><a class="menu02" href="flexible_capacity_service.html#sp03">
-            <p>資料中心搬遷服務</p>
-          </a></div>
-      </div>
     </div>
-  </div>
-  <div class="container container--gallery">
-    <div class="row">
-
-
-
-
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/EJ9A2960.JPG"><img src="photo/EJ9A2960s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/EJ9A4035.JPG"><img src="photo/EJ9A4035s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A2344.JPG"><img src="photo/R89A2344s.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1140.JPG"><img src="photo/R89A1140s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1157.JPG"><img src="photo/R89A1157s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-5"><a class="photo-zoom" href="photo/R89A1169.JPG"><img src="photo/R89A1169s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-7"><a class="photo-zoom" href="photo/R89A1223.JPG"><img src="photo/R89A1223s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-7"><a class="photo-zoom" href="photo/R89A1225.JPG"><img src="photo/R89A1225s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-5"><a class="photo-zoom" href="photo/R89A1231.JPG"><img src="photo/R89A1231s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1242.JPG"><img src="photo/R89A1242s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1788.JPG"><img src="photo/R89A1788s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A1841.JPG"><img src="photo/R89A1841s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A1842.JPG"><img src="photo/R89A1842s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A1845.JPG"><img src="photo/R89A1845s.jpg" alt="" />
-        </a>
-      </div>
-
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A2434.JPG"><img src="photo/R89A2434s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-8"><a class="photo-zoom" href="photo/R89A4272.JPG"><img src="photo/R89A4272s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4282.JPG"><img src="photo/R89A4282s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4350.JPG"><img src="photo/R89A4350s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4353.JPG"><img src="photo/R89A4353s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4356.JPG"><img src="photo/R89A4356s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4360.JPG"><img src="photo/R89A4360s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4404.JPG"><img src="photo/R89A4404s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A4405.JPG"><img src="photo/R89A4405s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A4423.JPG"><img src="photo/R89A4423s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-4"><a class="photo-zoom" href="photo/R89A4811.JPG"><img src="photo/R89A4811s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-8"><a class="photo-zoom" href="photo/R89A4909.JPG"><img src="photo/R89A4909s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A4979.JPG"><img src="photo/R89A4979s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A5097.JPG"><img src="photo/R89A5097s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-3"><a class="photo-zoom" href="photo/R89A5101.JPG"><img src="photo/R89A5101s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-3"><a class="photo-zoom" href="photo/R89A5574.JPG"><img src="photo/R89A5574s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-3"><a class="photo-zoom" href="photo/R89A5646.JPG"><img src="photo/R89A5646s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-3"><a class="photo-zoom" href="photo/R89A5653.JPG"><img src="photo/R89A5653s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A8754.JPG"><img src="photo/R89A8754s.jpg" alt="" />
-        </a>
-      </div>
-      <div class="col-sm-6"><a class="photo-zoom" href="photo/R89A8839.JPG"><img src="photo/R89A8839s.jpg" alt="" />
-        </a>
-      </div>
-
-
-
-
-
-
-
-
-
-
+    <!--footer-->
+    <div class="footer">
+      <p class="footer_top_line"></p>
+      <p class="footer_text">
+        Copyright © JETWELL COMPUTER CO., LTD. All Rights Reserved.
+      </p>
+      <p class="footer_text">
+        <a href="https://goo.gl/maps/Y9jsFHK4poR2" target="_blank"
+          >台灣總公司 高雄市左營區民族一路1163號 </a
+        ><a href="tel:07-345801">TEL： 07 - 3458011 </a
+        ><a href="tel:07-3458433">FAX ：07 - 3458433</a>
+      </p>
     </div>
-  </div>
-  <!--footer-->
-  <div class="footer">
-    <p class="footer_top_line"></p>
-    <p class="footer_text">Copyright © JETWELL COMPUTER CO., LTD. All Rights Reserved.
-
-    </p>
-    <p class="footer_text"><a href="https://goo.gl/maps/Y9jsFHK4poR2" target="_blank">台灣總公司 高雄市左營區民族一路1163號 </a><a
-        href="tel:07-345801">TEL： 07 - 3458011 </a><a href="tel:07-3458433">FAX ：07 - 3458433</a></p>
-  </div>
-  <script>
-
-
-    $(document).ready(function () {
-      $('.container--gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        mainClass: 'mfp-with-zoom mfp-img-mobile',
-        image: {
-          verticalFit: true,
-        },
-        gallery: {
-          enabled: true
-        },
-        zoom: {
-          enabled: true,
-          duration: 230,
-          opener: function (element) {
-            return element.find('img');
+    <script>
+      $(document).ready(function() {
+        $(".container--gallery").magnificPopup({
+          delegate: "a",
+          type: "image",
+          mainClass: "mfp-with-zoom mfp-img-mobile",
+          image: {
+            verticalFit: true
+          },
+          gallery: {
+            enabled: true
+          },
+          zoom: {
+            enabled: true,
+            duration: 230,
+            opener: function(element) {
+              return element.find("img");
+            }
           }
-        }
+        });
       });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
