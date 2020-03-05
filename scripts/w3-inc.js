@@ -1,30 +1,28 @@
-$(function() {
-    // include page
-    w3.includeHTML();
-});
+(function () {
 
-var w3 = {};
+myHTMLInclude();
 
-w3.includeHTML = function(cb) {
-    var z, i, elmnt, file, xhttp;
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      file = elmnt.getAttribute("include-html");
-      if (file) {
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            elmnt.removeAttribute("include-html");
-            w3.includeHTML(cb);
-          }
-        }      
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        return;
-      }
+function myHTMLInclude() {
+  var z, i, a, file, xhttp;
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    if (z[i].getAttribute("w3-include-html")) {
+      a = z[i].cloneNode(false);
+      file = z[i].getAttribute("w3-include-html");
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+          a.removeAttribute("w3-include-html");
+          a.innerHTML = xhttp.responseText;
+          z[i].parentNode.replaceChild(a, z[i]);
+          myHTMLInclude();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      return;
     }
-    if (cb) cb();
-  };
+  }
+}
+
+})();
