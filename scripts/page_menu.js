@@ -1,6 +1,9 @@
 $(document).ready(function(){
-	autoHoverMenu();
-	mobileMenuSwitch();	
+autoHoverMenu();
+
+$('.mobile_menu_btn').on('click', function(){
+$('.menu_blcok').toggleClass('show');
+});
 });
 
 //menu auto hover
@@ -17,9 +20,9 @@ function autoHoverMenu(){
 }
 
 //header menu
-function mobileMenuSwitch(){
-	$('.mobile_menu_btn').on('click', function(){
-		$('.menu_blcok').toggleClass('show');
-	});
-}
+// function mobileMenuSwitch(){
+// 	$('.mobile_menu_btn').on('click', function(){
+// 		$('.menu_blcok').toggleClass('show');
+// 	});
+// }
 
